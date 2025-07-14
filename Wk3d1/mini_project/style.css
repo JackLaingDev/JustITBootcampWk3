@@ -1,0 +1,35 @@
+body{
+    height: 100vh;
+}
+
+main{
+    flex-direction: column;
+}
+
+.align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-rows: 15vh 15vh 15vh;
+    justify-content: space-between;
+}
+
+.gameCell{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(190, 208, 186);
+    border: 2px solid rgb(102, 88, 88);
+}
+
+.player1Cell{
+    background-color: red;
+}
+
+.player2Cell{
+    background-color: blue;
+}
