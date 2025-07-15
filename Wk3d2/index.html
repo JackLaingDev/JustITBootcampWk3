@@ -9,30 +9,42 @@
 <body>
     <main>
 
-        <nav class="align-center">
-            <h1>MoodBoard</h1>
+        <nav id="top" class="align-center">
+            <h1>MoodBoard Mini Project</h1>
+            <div id="delete" class="align-center">
+                <p>Delete Post</p>
+            </div>
         </nav>
 
         <section class="align-center" id="addQuote">
-            <form id="quoteForm" class="align-center">
+            <form id="quoteForm" class="align-center raised-box">
                 <label for="quote">Enter a Quote</label>
-                <input type="text" name="quote" id="quote">
+                <input type="text" name="quote" id="quote" required minlength="30">
 
-                <button type="submit">Add Quote</button>
+                <button id="quoteSubmit" type="submit">Add Quote</button>
             </form>
+            <div class="align-center">
+                <h2>Press # to take you back to the top!</h2>
+            </div>
         </section>
 
         <section class="align-center" id="feed">
-            <h1>FEED</h1>
+            <h2 hidden id="warning">Careful, This Button Will Remove The Last Post</h2>
         </section>
 
         <section class="align-center" id="addImage">
-            <form id="imgForm" class="align-center">
-                <label for="image">Upload an Image</label>
-                <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <form id="imgForm" class="align-center raised-box">
+                <label for="imageInput">Upload an Image</label>
+                <input type="file" id="imageInput" name="imageInput" accept="image/png, image/jpeg" required>
 
-                <button type="submit">Upload</button>
+                <label for="image_text">Enter Image Description</label>
+                <input type="text" name="image_text" id="image_text" required minlength="30">
+
+                <button id="imageUpload" type="submit">Upload</button>
             </form>
+            <div class="align-center">
+                <h2>Press ] to change the feed colour!</h2>
+            </div>
         </section>
         
     </main>
