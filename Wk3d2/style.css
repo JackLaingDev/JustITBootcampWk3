@@ -1,0 +1,38 @@
+/* Element CSS */
+body{
+    margin:0px;
+    padding:0px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: "nav nav nav"
+                         "addQuote feed addImage";
+}
+
+nav{
+    grid-area: nav;
+}
+
+/* ID CSS */
+#addQuote{
+    grid-area: addQuote;
+}
+
+#addImage{
+    grid-area: addImage;
+}
+
+#feed{
+    grid-area: feed;
+}
+
+/* Class CSS */
+.align-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
