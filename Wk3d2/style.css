@@ -7,7 +7,7 @@ body{
 main{
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 15vh 85vh;
     grid-template-areas: "nav nav nav"
                          "addQuote feed addImage";
 }

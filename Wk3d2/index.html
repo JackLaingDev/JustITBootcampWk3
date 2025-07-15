@@ -8,21 +8,33 @@
 </head>
 <body>
     <main>
-        <nav>
-            <h1>NAVBAR</h1>
+
+        <nav class="align-center">
+            <h1>MoodBoard</h1>
         </nav>
 
         <section class="align-center" id="addQuote">
-            <h1>ADD QUOTE</h1>
+            <form id="quoteForm" class="align-center">
+                <label for="quote">Enter a Quote</label>
+                <input type="text" name="quote" id="quote">
+
+                <button type="submit">Add Quote</button>
+            </form>
         </section>
 
-        <section class="align-center" id="addImage">
-            <h1>ADD IMAGE</h1>
-        </section>
-        
         <section class="align-center" id="feed">
             <h1>FEED</h1>
         </section>
+
+        <section class="align-center" id="addImage">
+            <form id="imgForm" class="align-center">
+                <label for="image">Upload an Image</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        
     </main>
 </body>
 <script src="script.js"></script>
