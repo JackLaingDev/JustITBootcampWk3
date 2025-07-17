@@ -1,5 +1,24 @@
-// Element definitions
+// Element definitions 
+// Search
+const searchDiv = document.querySelector('#searchDiv')
+const search = document.querySelector('#search')
 
+// Info
+const infoMain = document.querySelector('#info')
+// Weather Info
+const weatherInfoDiv = document.querySelector('#weatherInfo')
+const cityDisplay = document.querySelector('#cityDisplay')
+const weatherMain = document.querySelector('#weatherMain')
+const weatherDesc = document.querySelector('#weatherDesc')
+
+// Meteorological Info
+const meteorInfoDiv = document.querySelector('#meteorInfo')
+const temp = document.querySelector('#temp')
+const feelsLike = document.querySelector('#feelsLike')
+const tempMin = document.querySelector('#tempMin')
+const tempMax = document.querySelector('#tempMax')
+const pressure = document.querySelector('#pressure')
+const humidity = document.querySelector('#humidity')
 
 // Funcs
 const getWeatherData = async ()=>{
