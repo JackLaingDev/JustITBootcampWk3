@@ -20,11 +20,10 @@ const tempMin = document.querySelector('#tempMin')
 const tempMax = document.querySelector('#tempMax')
 const pressure = document.querySelector('#pressure')
 const humidity = document.querySelector('#humidity')
-let city = 'London'
+
 // Funcs
-const getWeatherData = async ()=>{
+const getWeatherData = async (city)=>{
     const api_key = 'b02f35934fb0cba82950cbbf2907fa55'
-    let city = 'London'
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + api_key + '&units=metric'
 
     return fetch(url) 
@@ -41,22 +40,33 @@ const getWeatherData = async ()=>{
     });
 }
 
-const displayWeather = async ()=>{
+const displayWeather = async (city)=>{
     console.log("Displaying weather...");
 
     try{
-        const weatherData = await getWeatherData();
+        const weatherData = await getWeatherData(city);
 
         // Main Display
         cityDisplay.textContent = city;
         weatherMain.textContent = weatherData.weather[0].main;
+        weatherDesc.textContent = weatherData.weather[0].description;
+
+        // Meteorological Display
+        temp.textContent = weatherData.main.temp;
+        feelsLike.textContent = weatherData.main.feels_like;
+        tempMin.textContent = weatherData.main.temp_min;
+        tempMax.textContent = weatherData.main.temp_max;
+        pressure.textContent = weatherData.main.pressure;
+        humidity.textContent = weatherData.main.humidity;
 
     }finally{
-
+        console.log(`Weather data loaded!`);
     }
 }
 
 
 searchBtn.addEventListener('click', ()=>{
-    displayWeather();
+    const city = search.value;
+    console.log(city)
+    displayWeather(city);
 })
